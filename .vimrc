@@ -1,0 +1,66 @@
+set nocompatible
+" *** load vundle ***
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'mrtazz/molokai.vim'
+Bundle 'scrooloose/nerdtree'
+
+let g:ctrlp_open_new_file = 't'
+" open files in new tab
+let g:ctrlp_prompt_mappings = {
+ \ 'AcceptSelection("e")': [],
+ \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+ \ }
+
+" autoreload .vimrc
+augroup myvimrc
+   au!
+   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+let history=1000
+set hidden
+set wildmenu
+" case sensitive search
+set ignorecase 
+set smartcase
+set title
+set scrolloff=4
+set wildignore+=temp,node_modules
+set backspace=indent,eol,start
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+set expandtab
+set tabstop=4
+" uses ctrl+> or ctrl+< to indent
+set shiftwidth=4
+set nofoldenable
+set hlsearch
+set incsearch
+let t_Co=256
+
+ if has("gui_running")
+   "set guifont=Source\ Sans\ Pro\ 22
+   "colorscheme railcasts 
+else
+   "colorscheme molokai
+endif
+
+let mapleader=","
+" maps tabn to ctrl+H
+noremap <C-H> <ESC>:tabn<CR>
+
+" -----------------------------------
+" Maps ctrl+space to ctrl+n (autocomplete)
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
