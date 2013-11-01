@@ -8,6 +8,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'mrtazz/molokai.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'flazz/vim-colorschemes'
 
 let g:ctrlp_open_new_file = 't'
 " open files in new tab
@@ -45,9 +46,10 @@ set hlsearch
 set incsearch
 let t_Co=256
 
- if has("gui_running")
+if has("gui_running")
    "set guifont=Source\ Sans\ Pro\ 22
    "colorscheme railcasts 
+   colorscheme darkblack
 else
    "colorscheme molokai
 endif
