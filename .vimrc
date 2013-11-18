@@ -49,15 +49,15 @@ let t_Co=256
 if has("gui_running")
    "set guifont=Source\ Sans\ Pro\ 22
    "colorscheme railcasts 
-   colorscheme darkblack
+   colorscheme molokai
 else
    "colorscheme molokai
 endif
 
 let mapleader=","
 " maps tabn to ctrl+H
-noremap <C-H> <ESC>:tabn<CR>
-
+noremap <C-L> <ESC>:tabn<CR>
+noremap <C-H> <ESC>:tabp<CR>
 " -----------------------------------
 " Maps ctrl+space to ctrl+n (autocomplete)
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
