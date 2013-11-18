@@ -55,7 +55,7 @@ else
 endif
 
 let mapleader=","
-" maps tabn to ctrl+H
+" maps tabn->ctrl+L tabp->ctrl+H
 noremap <C-L> <ESC>:tabn<CR>
 noremap <C-H> <ESC>:tabp<CR>
 " -----------------------------------
