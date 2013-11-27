@@ -41,6 +41,7 @@ set expandtab
 set tabstop=4
 " uses ctrl+> or ctrl+< to indent
 set shiftwidth=4
+set autoindent
 set nofoldenable
 set hlsearch
 set incsearch
