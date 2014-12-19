@@ -12,6 +12,7 @@ Bundle 'The-NERD-Commenter'
 Bundle 'mrtazz/molokai.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'OrangeT/vim-csharp'
 
 let g:ctrlp_open_new_file = 't'
 " open files in new tab
